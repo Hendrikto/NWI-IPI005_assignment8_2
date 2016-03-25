@@ -16,6 +16,7 @@ public class Assignment8_2 {
         System.out.println(w);
         w.pay(); // if this succeeds it blocks further actions (see below)
         w.add(new Watermeloen()); // this does not get added
+        w.remove(new Watermeloen()); // this does not get removed
         w.pay(); // this does not cause a second payment
     }
 

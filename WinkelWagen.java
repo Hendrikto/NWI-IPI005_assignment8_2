@@ -28,7 +28,11 @@ public class WinkelWagen {
     }
 
     public boolean remove(Artikel a) {
-        return this.articles.remove(a);
+        if (!this.paid) {
+            return this.articles.remove(a);
+        } else {
+            return false;
+        }
     }
 
     public double getCost() {

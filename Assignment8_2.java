@@ -1,12 +1,16 @@
 package assignment8_2;
 
 /**
+ * Contains the main method.
  *
- * @author Hendrik
+ * @author Hendrik Werner // s4549775
+ * @author Jasper Haasdijk // s4449754
  */
 public class Assignment8_2 {
 
     /**
+     * Entry point.
+     *
      * @param args the command line arguments
      */
     public static void main(String[] args) {

@@ -63,15 +63,11 @@ public class WinkelWagen {
     public double getCost() {
         int total = 0;
         // sum cost of articles
-        total += this.articles.stream().map((a) -> {
-            return a.getPrijs();
-        }).reduce(0.0, (a, b) -> {
+        total += this.articles.stream().map(Artikel::getPrijs).reduce(0.0, (a, b) -> {
             return a + b;
         });
         // add the sum of unique shipping costs and return that
-        return total + this.articles.stream().map((a) -> {
-            return a.verzendkosten();
-        }).distinct().reduce(0.0, (a, b) -> {
+        return total + this.articles.stream().map(Artikel::verzendkosten).distinct().reduce(0.0, (a, b) -> {
             return a + b;
         });
     }

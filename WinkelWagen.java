@@ -61,7 +61,7 @@ public class WinkelWagen {
      * @return the total cost of this shopping cart
      */
     public double getCost() {
-        int total = 0;
+        double total = 0;
         // sum cost of articles
         total += this.articles.stream().map(Artikel::getPrijs).reduce(0.0, (a, b) -> {
             return a + b;
